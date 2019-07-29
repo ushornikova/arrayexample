@@ -17,7 +17,23 @@ namespace arrayexample
                 //TheClassWithOneParam whathever = var[i];
                 Console.WriteLine(var[i].TheElement);
             }
-            Console.ReadKey();
+
+            int[,] masyv = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
+
+            int rows = masyv.GetUpperBound(0) + 1;
+            int columns = masyv.Length / rows;
+
+            Console.WriteLine(rows);
+            Console.WriteLine(masyv.Length);
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < columns; j++)
+                {
+                    Console.Write($"{masyv[i, j]} ");
+                }
+                Console.WriteLine();
+            }
+                Console.ReadKey();
         }
     }
 
@@ -31,4 +47,5 @@ namespace arrayexample
         }
 
     }
+
 }
